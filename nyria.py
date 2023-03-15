@@ -21,7 +21,7 @@ class Nyria(commands.Bot):
             for name in files:
                 if str(root).endswith("__pycache__"):
                     continue
-                self.load_extension(os.path.join(root, name).replace("\\", ".")[:-3])
+                self.load_extension(os.path.join(root, name).replace("/", ".")[:-3])
 
         self.run(self.__token)
 
